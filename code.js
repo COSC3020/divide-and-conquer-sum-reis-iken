@@ -3,9 +3,10 @@ function divideAndConquerSum(a) {
         return 0; }
     if (a.length === 1) {
         return a[0]; }
-
-    let n = a.length;
-    let div = math.floor(n/3);
+    if (a.length === 2) {
+        return a[0] + a[1]; }
+        
+    let div = math.floor(a.length/3);
     let subA1 = a.slice(0, div);
     let subA2 = a.slice(div, 2 * div);
     let subA3 = a.slice(2 * div);
