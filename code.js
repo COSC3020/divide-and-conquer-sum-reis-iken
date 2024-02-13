@@ -5,8 +5,8 @@ function divideAndConquerSum(a) {
     let n = a.length;
     let div = math.floor(n/3);
     let subA1 = a.slice(0, div);
-    let subA2 = a.slice(0, 2 * div);
-    let subA3 = a.slice(o, 3 * div);
+    let subA2 = a.slice(div, 2 * div);
+    let subA3 = a.slice(2 * div, 3 * div);
 
     let sum1 = divideAndConquerSum(subA1);
     let sum2 = divideAndConquerSum(subA2);
