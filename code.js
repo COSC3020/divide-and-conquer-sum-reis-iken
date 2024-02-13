@@ -13,7 +13,7 @@ function divideAndConquerSum(a) {
 
     let sum1 = divideAndConquerSum(subA1);
     let sum2 = divideAndConquerSum(subA2);
-    let sum3 = divideAndConquerSum(subA2);
+    let sum3 = divideAndConquerSum(subA3);
     
     return sum1 + sum2 + sum3;
 }
