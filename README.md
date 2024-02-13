@@ -30,21 +30,37 @@ most important part. Add your answer to this markdown file.
 **My Explanation:**
 
 Recurrence Relation:
+
 T(n) = {1 if n <= 2, 3T(n/3) + n
 
+
 Solve By Substitution:
+
 T(n) = 3(3T(n/9) + n/3) + n
+
 = 9T(n/9) + 2n
+
 = 27T(n/27) + 3n
+
 = 3^iT(n/(3^i)) + in
+
 for i = log(base3)n:
+
 = nT(1) + nlog(base3)n
+
 So since T(1) is our base case, we get:
+
 T(n) = n + nlog(base3)n ∈ Θ(nlogn)
+
 So our big Theta complexity is Θ(nlogn).
 
+
 Reasoning:
+
 We know the base case is 1 because it takes constant time to simply return a value.
+
 We also know that in each recursive call, the array is split into 3 parts. So we know that the algorithm performs 3 resursive calls on sub-arrays of size n/3. This explains our use of 3T(n/3).
+
 Lastly, we know that the addition at the end of the function takes constant time. Hence, our use of + n.
+
 Once we have this recurrence relation, we can solve by substitution, basically the exact same as how we did so for merge sort. When we sub in i = nlog(base3)n, we then get to our base case, which we can sub in n for. At that point, we are able to conclude our big Theta complexity.
