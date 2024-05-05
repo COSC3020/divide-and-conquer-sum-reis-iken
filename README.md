@@ -61,6 +61,6 @@ We know the base case is 1 because it takes constant time to simply return a val
 
 We also know that in each recursive call, the array is split into 3 parts. So we know that the algorithm performs 3 resursive calls on sub-arrays of size n/3. This explains our use of 3T(n/3).
 
-Lastly, we know that the addition at the end of the function takes constant time. Hence, our use of + n.
+Lastly, we know that the slicing of the array parts takes n time.
 
 Once we have this recurrence relation, we can solve by substitution, basically the exact same as how we did so for merge sort. When we sub in i = nlog(base3)n, we then get to our base case, which we can sub in n for. At that point, we are able to conclude our big Theta complexity.
